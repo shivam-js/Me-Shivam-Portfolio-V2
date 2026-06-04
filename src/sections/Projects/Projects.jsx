@@ -1,42 +1,52 @@
 import { ExternalLink } from "lucide-react";
+import hireproofImg from "../../assets/projects/hireproof-ai.png";
+import expenseTrackerImg from "../../assets/projects/Smart-Expense-Tracker.png";
+import truthlensImg from "../../assets/projects/truthlens-ai.png";
+import suryapuraImg from "../../assets/projects/suryapura.png";
+import dischargeSummaryImg from "../../assets/projects/discharge-summary-agent.png";
 
 const projects = [
   {
     title: "HireProof AI",
     description:
       "AI-powered hiring intelligence platform for recruiter workflow automation and candidate evaluation.",
-    image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1400&auto=format&fit=crop",
+    image: hireproofImg,
     tech: ["MERN","TailwindCSS", "JWT", "LLM", "GSAP", "Vite", "REST APIs"],
-    live: "#",
-    github: "#",
+    live: "https://hireproof-ai.vercel.app/",
+    github: "https://github.com/shivam-js/HireProof-AI",
+  },
+  {
+    title: "Discharge Summary Agent",
+    description:
+      "Agentic AI system for hospital discharge summary generation with medication reconciliation and safety guardrails.",
+    image: dischargeSummaryImg,
+    tech: ["Python", "LangGraph", "LLM", "RAG", "AI Agents"],
+    live: "https://github.com/shivam-js/Discharge-Summary-Agent",
+    github: "https://github.com/shivam-js/Discharge-Summary-Agent",
   },
   {
     title: "Smart Expense Tracker",
     description:
       "Full-stack expense management platform with JWT authentication and real-time analytics dashboard.",
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1400&auto=format&fit=crop",
+    image: expenseTrackerImg,
     tech: ["React.js", "Node.js", "MongoDB","Express.js", "JWT", "REST APIs", "Vite"],
-    live: "#",
-    github: "#",
+    live: "https://smart-expense-trackee.netlify.app/",
+    github: "https://github.com/shivam-js/smart-expense-tracker",
   },
   {
     title: "TruthLens AI",
     description:
       "Fake news detection platform powered by RAG pipelines and LLM-based verification.",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop",
+    image: truthlensImg,
     tech: ["React.js", "Node.js","Express.js", "MongoDB", "RAG", "LLM", "Vite"],
-    live: "#",
-    github: "#",
+    live: "https://truthlenss-ai.netlify.app/",
+    github: "https://github.com/shivam-js/TruthLens-AI",
   },
   {
     title: "Suryapura Rural Development Portal",
     description:
       "UI-UX focused Modern rural development web platform showcasing smart agriculture, digital education, infrastructure development and digital transformation initiatives.",
-    image:
-      "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1400&auto=format&fit=crop",
+    image: suryapuraImg,
     tech: ["React.js", "TailwindCSS", "GSAP", "Vite"],
     live: "https://suryapura-rural-development-portal.vercel.app/",
     github:
@@ -95,7 +105,7 @@ const Projects = () => {
               className="
                 group
                 relative
-                h-[320px] 
+                h-[340px] 
                 md:h-[340px]
                 overflow-hidden
                 rounded-none
@@ -119,8 +129,8 @@ const Projects = () => {
                 w-full
                 h-full
                 object-cover
-                brightness-[0.38]
-                group-hover:brightness-100
+                brightness-[0.90]
+                group-hover:brightness-110
                 transition-all
                 duration-700
                 group-hover:scale-[1.02]
@@ -131,10 +141,8 @@ const Projects = () => {
                 className="
                   absolute
                   inset-0
-                  bg-gradient-to-t
-                  from-black/90
-                  via-black/65
-                  to-transparent
+                  bg-black/60
+                  backdrop-blur-[1px]
                   group-hover:from-black/55
                   group-hover:via-black/25
                   transition-all
@@ -143,11 +151,18 @@ const Projects = () => {
               />
 
               <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7 z-10">
-                <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3 leading-tight">
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3 leading-tight">
                   {project.title}
                 </h3>
 
-                <p className="text-slate-300 text-sm leading-7 line-clamp-2">
+                <p className="
+                    text-slate-300
+                    text-sm
+                    leading-7
+                    line-clamp-3
+                    md:line-clamp-2
+                   "
+                  >
                   {project.description}
                 </p>
 
@@ -174,25 +189,36 @@ const Projects = () => {
                 <div
                   className="
                     flex gap-3 mt-6
-                    opacity-0
-                    translate-y-5
-                    group-hover:opacity-100
-                    group-hover:translate-y-0
+
+                    opacity-100
+                    translate-y-0
+
+                    md:opacity-0
+                    md:translate-y-5
+
+                    md:group-hover:opacity-100
+                    md:group-hover:translate-y-0
+
                     transition-all
                     duration-500
                   "
                 >
                   <a
                     href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="
-                      px-5 py-3 rounded-full
-                      bg-gradient-to-r
+                      px-4 py-2
+                      md:px-5 md:py-3
+
+                      rounded-full
                       bg-white/10
                       backdrop-blur-md
                       border border-white/10
                       text-white
-                      text-sm
-                      font-medium
+
+                      text-xs
+                      md:text-sm
                     "
                   >
                     Live
@@ -200,13 +226,20 @@ const Projects = () => {
 
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="
-                      px-5 py-3 rounded-full
+                      px-4 py-2
+                      md:px-5 md:py-3
+
+                      rounded-full
                       bg-white/10
                       backdrop-blur-md
                       border border-white/10
                       text-white
-                      text-sm
+
+                      text-xs
+                      md:text-sm
                     "
                   >
                     GitHub

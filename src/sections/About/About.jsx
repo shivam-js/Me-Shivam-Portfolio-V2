@@ -58,7 +58,7 @@ const About = () => {
     <section
       id="about"
       ref={aboutRef}
-      className="relative pt-16 pb-28 md:pt-24 md:pb-32 px-6 bg-white dark:bg-[#030712] transition-colors duration-500"
+      className="relative pt-12 pb-28 md:pt-16 md:pb-32 px-6 bg-white dark:bg-[#030712] transition-colors duration-500"
     >
       <div className="max-w-4xl mx-auto text-center">
         <p className="about-label text-sky-600 dark:text-cyan-400 uppercase tracking-[0.25em] text-sm mb-6">

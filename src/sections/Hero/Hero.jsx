@@ -51,11 +51,10 @@ const Hero = () => {
         )
 
         .from(
-          heroButtonsRef.current.children,
+          heroButtonsRef.current,
           {
             opacity: 0,
             y: 18,
-            stagger: 0.12,
             duration: 0.7,
             ease: "power3.out",
           },
@@ -122,7 +121,7 @@ const Hero = () => {
         pb-8
         md:pt-0
         md:pb-0
-        md:min-h-screen
+        md:min-h-[88vh]
         flex
         items-center
         md:items-center
@@ -137,8 +136,10 @@ const Hero = () => {
     >
       {/* background glow */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-24 left-1/2 h-[460px] w-[460px] -translate-x-1/2 rounded-full bg-violet-500/10 blur-[140px]" />
-        <div className="absolute bottom-16 right-16 h-[220px] w-[220px] rounded-full bg-cyan-400/10 blur-[120px]" />
+        <div className="absolute top-24 left-1/2 h-[280px] w-[280px]
+            md:h-[460px] md:w-[460px] -translate-x-1/2 rounded-full bg-violet-500/10 blur-[140px]" />
+        <div className="absolute bottom-16 right-16 h-[140px] w-[140px]
+            md:h-[220px] md:w-[220px] rounded-full bg-cyan-400/10 blur-[120px]" />
       </div>
 
       <div className="w-full max-w-6xl mx-auto">
@@ -151,31 +152,60 @@ const Hero = () => {
             {/* DP */}
             <div
               ref={heroDpRef}
-              className="relative h-20 w-20 md:h-24 md:w-24 shrink-0"
+              className="
+                relative
+                h-24
+                w-24
+                md:h-28
+                md:w-28
+                shrink-0
+              "
             >
               <div
                 className="
                   absolute
                   inset-0
-                  scale-125
-                  blur-3xl
-                  bg-sky-300/30
-                  dark:bg-violet-500/20
+                  scale-[1.2]
+                  blur-[32px]
+
+                  bg-transparent
+
+                  dark:bg-violet-500/25
                 "
               />
 
-              <img
-                src={profileImage}
-                alt="Shivam Prasad"
+              <div
                 className="
                   relative
                   h-full
                   w-full
-                  object-cover
-                  rounded-none
-                  shadow-2xl
+                  p-[3px]
+
+                  bg-white
+                  dark:bg-white/5
+
+                  border
+                  border-slate-200
+                  dark:border-white/10
+
+                  backdrop-blur-xl
+
+                  shadow-[0_15px_40px_rgba(15,23,42,0.12)]
+
+                  dark:shadow-[0_20px_60px_rgba(139,92,246,0.18)]
                 "
-              />
+              >
+                <img
+                  src={profileImage}
+                  alt="Shivam Prasad"
+                  className="
+                    h-full
+                    w-full
+                    object-cover
+                    rounded-none
+                  "
+                />
+              </div>
             </div>
 
             {/* Name + badge */}
@@ -208,7 +238,9 @@ const Hero = () => {
                   dark:text-cyan-400
                 "
               >
-                FULL STACK DEVELOPER | CREATING IMPACT WITH AI
+              FULL STACK DEVELOPER
+              <br />
+              CREATING IMPACT WITH AI
               </p>
             </div>
           </div>
@@ -252,55 +284,109 @@ const Hero = () => {
           <div
             ref={heroButtonsRef}
             className="
-              mt-10
+              mt-8
               flex
               flex-col
               sm:flex-row
+              justify-center
               items-center
-              md:items-start
               gap-5
             "
           >
-            <button
+            {/* View Projects */}
+            <a
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className="
+                group
+
+                relative
+                inline-flex
+                items-center
+                gap-4
+
                 px-8
                 py-4
-                rounded-full
-                bg-indigo-600
-                hover:bg-indigo-500
-                dark:bg-violet-500
-                dark:hover:bg-violet-400
-                text-white
-                font-semibold
+
+                border
+                border-cyan-500/70
+
+                text-slate-900
+                dark:text-white
+
+                bg-cyan-500/5
+
                 transition-all
                 duration-300
+
+                hover:bg-cyan-500/10
+                hover:border-cyan-400
               "
             >
-              View Projects
-            </button>
+              <span className="font-medium">
+                View Projects
+              </span>
 
-            <button
+              <span
+                className="
+                  flex
+                  items-center
+                  justify-center
+
+                  h-8
+                  w-8
+
+                  rounded-full
+
+                  bg-cyan-400
+                  text-slate-950
+
+                  text-sm
+
+                  animate-bounce
+                "
+              >
+                ↓
+              </span>
+            </a>
+
+            {/* Let's Connect */}
+            <a
+              href="#contact"
               className="
+                inline-flex
+                items-center
+                justify-center
+
                 px-8
                 py-4
-                rounded-full
+
                 border
                 border-slate-300
-                dark:border-slate-700
+                dark:border-white/15
+
                 text-slate-700
-                dark:text-slate-200
-                hover:bg-slate-100
-                dark:hover:bg-white/5
+                dark:text-slate-300
+
+                font-medium
+
                 transition-all
                 duration-300
+
+                hover:border-slate-900
+                dark:hover:border-white
+
+                hover:text-slate-900
+                dark:hover:text-white
               "
             >
-              Contact Me
-            </button>
+              Let's Connect
+            </a>
           </div>
         </div>
-
-        
       </div>
     </section>
   );

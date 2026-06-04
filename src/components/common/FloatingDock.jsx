@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import {
   House,
   FolderKanban,
-  Mail,
   Moon,
   Wrench,
   FileText,
@@ -20,7 +19,6 @@ const dockItems = [
   { icon: House, href: "#home", label: "Home" },
   { icon: Wrench, href: "#skills", label: "Skills" },
   { icon: FolderKanban, href: "#projects", label: "Projects" },
-  { icon: Mail, href: "#contact", label: "Gmail" },
   {
     icon: FaGithub,
     href: "https://github.com/shivam-js",
@@ -97,7 +95,7 @@ const FloatingDock = () => {
       }}
       animate={{
         paddingLeft: dockHovered ? 45 : 45,
-        paddingRight: dockHovered ? 34 : 24,
+        paddingRight: dockHovered ? 34 : 34,
         scale: dockHovered ? 1.02 : 1,
       }}
       transition={spring}
@@ -113,13 +111,14 @@ const FloatingDock = () => {
         items-center
         rounded-full
         border
-        border-black/10 
+        border-slate-300/20
         dark:border-white/10
-        bg-black 
-        dark:bg-black/30
+        bg-transparent
+        backdrop-blur-xl
         py-2
-        backdrop-blur-2xl
-        shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+        backdrop-blur-3xl
+        shadow-[0_10px_40px_rgba(15,23,42,0.12)]
+        dark:shadow-[0_10px_40px_rgba(0,0,0,0.35)]
         scale-[0.78]
         sm:scale-[0.88]
         md:scale-100
@@ -224,7 +223,7 @@ const FloatingDock = () => {
                 h-8
                 w-8
                 rounded-full
-                bg-violet-500/20
+                bg-cyan-400/20
                 blur-xl
               "
             />
@@ -244,8 +243,8 @@ const FloatingDock = () => {
                 size={20}
                 className={`relative z-10 transition-colors duration-300 ${
                   isActive
-                    ? "text-white"
-                    : "text-slate-300 dark:text-slate-300"
+                    ? "text-cyan-500 dark:text-white"
+                    : "text-slate-600 dark:text-slate-300"
                 }`}
               />
             </div>

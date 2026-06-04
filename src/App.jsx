@@ -4,6 +4,8 @@ import Skills from "./sections/Skills/Skills";
 import Projects from "./sections/Projects/Projects";
 import FloatingDock from "./components/common/FloatingDock";
 import Contact from "./sections/Contact/Contact";
+import Education from "./components/Education/Education";
+import Certifications from "./components/Certifications/Certifications";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -25,6 +27,8 @@ function App() {
     >
       <Hero />
       <About />
+      <Education />
+      <Certifications />
       <Skills />
       <Projects />
       <Contact />
