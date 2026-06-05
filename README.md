@@ -8,11 +8,24 @@ Live Portfolio: https://me-shivam-thisside.vercel.app/
 
 ## 👨‍💻 About Me
 
-Hi, I'm Shivam Prasad.
+I'm Shivam Prasad, a Full Stack Developer and aspiring AI Engineer passionate about building scalable web applications, intelligent software systems, and impactful digital experiences.
 
-I build full-stack applications, AI-powered products, and user-focused digital experiences. My focus is on creating scalable software systems that combine modern engineering practices with intuitive user experiences.
+My journey started with web development and gradually evolved into full-stack engineering, where I enjoy working across the entire development lifecycle—from designing responsive user interfaces to developing backend APIs, databases, authentication systems, and AI-powered features.
 
-I enjoy working across the entire development lifecycle—from designing interfaces to building backend systems and integrating AI capabilities.
+Over time, I have built projects ranging from expense management platforms and hiring intelligence systems to RAG-powered AI applications and agentic AI workflows. I enjoy solving real-world problems through technology and continuously explore modern tools, frameworks, and AI technologies.
+
+Currently, my primary focus areas include:
+
+- Full Stack Development (MERN Stack)
+- Artificial Intelligence & LLM Applications
+- Retrieval-Augmented Generation (RAG)
+- Agentic AI Systems
+- REST API Development
+- Database Design & Authentication Systems
+- UI/UX Design & Frontend Engineering
+- Scalable Web Application Architecture
+
+I believe great software combines strong engineering, thoughtful design, and meaningful user experiences. My goal is to contribute to products that create real impact while continuously growing as a software engineer. 
 
 ---
 
