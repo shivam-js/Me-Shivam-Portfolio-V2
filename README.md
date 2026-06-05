@@ -2,7 +2,7 @@
 
 A modern developer portfolio built to showcase my work in Full Stack Development, AI Engineering, UI/UX Design, and scalable web applications.
 
-Live Portfolio: https://your-vercel-url.vercel.app
+Live Portfolio: https://me-shivam-thisside.vercel.app/
 
 ---
 
@@ -144,7 +144,7 @@ Feel free to connect regarding:
 
 ### Links
 
-- Portfolio: https://your-vercel-url.vercel.app
+- Portfolio: https://me-shivam-thisside.vercel.app/
 - GitHub: https://github.com/shivam-js
 - LinkedIn: https://www.linkedin.com/in/shivamprasad2026
 
