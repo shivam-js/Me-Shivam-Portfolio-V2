@@ -36,7 +36,7 @@ const dockItems = [
   },
   {
     icon: FileText,
-    href: "https://drive.google.com/file/d/1dESeigT0uhL8o7_QwLTO9yzAre-gHzbR/view?usp=drivesdk",
+    href: "https://drive.google.com/file/d/1sWpsLoc8D4aEeeC54AGsa3WSrbU-ODHR/view?usp=drivesdk",
     label: "Resume",
   },
   {
