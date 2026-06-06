@@ -320,7 +320,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://drive.google.com/uc?export=download&id=1Ga90X0-7sPdaIer946q7rxdCRssCj37U"
+              href="https://drive.google.com/uc?export=download&id=1dESeigT0uhL8o7_QwLTO9yzAre-gHzbR"
               target="_blank"
               rel="noreferrer"
               className="
